@@ -53,16 +53,16 @@ class Choice_2(Choice_0):
                     else:
                         print('入力された商品は存在しません')
 
-                #在庫入力
-                if exist_flg != None:
-                    insert_amount2 = input('在庫数を入力してください:')
-                    if insert_amount2.isdigit():
-                        cur.execute('update edit set amount = ? where drinks = ?',(insert_amount2,select))
-                    else: #数字以外が入力された時
-                        print('数値を入力してください')
+                    #在庫入力
+                    if exist_flg != None:
+                        insert_amount2 = input('在庫数を入力してください:')
+                        if insert_amount2.isdigit():
+                            cur.execute('update edit set amount = ? where drinks = ?',(insert_amount2,select))
+                        else: #数字以外が入力された時
+                            print('数値を入力してください')
 
-                else:
-                    print()
+                    else:
+                        print()
 
 class Choice_3(Choice_0):
     def edit_price (self):
@@ -75,10 +75,10 @@ class Choice_3(Choice_0):
                         drinklist.append("{}:{}円".format(self.i[0], self.i[1]))
                     print(*drinklist)
                     #編集商品の選択
-                    select = input('編集するドリンク名を入力してください:')
+                    select2 = input('編集するドリンク名を入力してください:')
                     exist_flg = None
                     for self.i in self.drinks:
-                        if self.i[0] == select:
+                        if self.i[0] == select2:
                             exist_flg = "exist"
                             break
                         else:
@@ -93,7 +93,7 @@ class Choice_3(Choice_0):
                     if exist_flg != None:
                         insert_price2 = input('商品の値段を入力してください:')
                         if insert_price2.isdigit():
-                                cur.execute('update from edit set price = ? where drinks = ?',(insert_price2,select))
+                                cur.execute('update from edit set price = ? where drinks = ?',(insert_price2,select2))
                         else: #数字以外が入力された時
                             print('数値を入力してください')
 
