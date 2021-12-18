@@ -9,3 +9,12 @@ menu_select2 = choice_0.menu_choice(menu_select)
 
 choice_1 = Choice_1()
 menu_select2 = choice_1.edit_insert(menu_select2)
+
+choice_2 = Choice_2()
+menu_select2 = choice_2.edit_stock(menu_select2)
+
+choice_3 = Choice_3()
+menu_select2 = choice_3.edit_price(menu_select2)
+
+choice_4 = Choice_4()
+menu_select2 = choice_4.edit_delete(menu_select2)
