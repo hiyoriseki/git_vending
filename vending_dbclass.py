@@ -14,16 +14,16 @@ class Vendings():
 class Choice_0():
     def menu_choice (self, arg):
         self.menu_select = arg
-        if self.menu_select == 1:
+        if self.menu_select == "1":
             print('1.商品追加','2.商品在庫数','3.商品価格','4.商品削除','5.終了')
-            self.menu_select2 = int(input('実行したいメニューを番号でお選び下さい:'))
+            self.menu_select2 = input('実行したいメニューを番号でお選び下さい:')
             return self.menu_select2
 
 class Choice_1():
     def edit_insert (self, arg):
         # 商品追加
         self.menu_select2 = arg
-        if self.menu_select2 == 1:
+        if self.menu_select2 == "1":
             try:
                 insert_drink = input('追加する商品名を入力してください:')
                 insert_price = int(input('追加する商品の値段を入力してください:'))
@@ -142,9 +142,3 @@ class Choice_4(Choice_0):
                 else:
                     print('Yes or Noで再度入力してください')
                 continue
-vending = Vendings ()
-choice_0 = Choice_0()
-choice_1 = Choice_1()
-choice_2 = Choice_2()
-choice_3 = Choice_3()
-choice_4 = Choice_4()
